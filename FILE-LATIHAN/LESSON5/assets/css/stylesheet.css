@@ -1,0 +1,42 @@
+.header{
+    background-color: #1ABC9C;
+    height: 130px;
+}
+.nohp{
+    position: relative;
+    float: right;
+    color: #fff;
+    font-size: 20px;
+}
+.logo{
+    margin: 15px;
+    height: 55px;
+}
+.logo-desc{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #fff;
+}
+.menu-home{
+    background-color: #1ABC9C;
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-regular{
+    padding: 15px;
+    color:#000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navigasi{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.gambar{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

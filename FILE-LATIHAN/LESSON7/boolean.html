@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <style>
+        .green{
+color: green;
+        }
+        .red{
+color: red;
+        }
+    </style>
+</head>
+<body>
+
+  <input type="text" id="nama"/>
+  <input type="text" id="nilai"/>
+  <button onclick="tambah()">submit</button>
+
+ <h1>Daftar Nilai</h1>
+ <ol></ol>
+
+<script src="assets/js/jquery.min.js"></script>
+<script>
+function tambah(){
+  var nama =   $('#nama').val();
+  var nilai =  $('#nilai').val();
+  var BilanganNilai = parseInt(nilai);
+    if(BilanganNilai > 60 ){
+        $('ol').append("<li class='green'> LULUS </li>");
+
+    }else{
+        $('ol').append("<li class='red'>TIDAK LULUS </li>");
+    }
+
+//   $('ol').append("<li> Nama +nama+' Nilai 90 </li>');
+    
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+</head>
+<body>
+
+<h1></h1>
+<h1 class="contoh-class"></h1>
+<h1 id="contoh-id"></h1>
+
+<h2 id="persamaan"></h2>
+<h2 id="lebihkecil"></h2>
+<h2 id="lebihbesar"></h2>
+
+
+
+<button onclick="hilangkan_Class()">KLIK UNTUK HILANGKAN CONTOH CLASS</button>
+
+ 
+<script src="assets/js/jquery.min.js"></script>
+<script>
+$("h1").text("Hallo INI H1");
+$(".contoh-class").text("Hallo INI Cara Modifikasi Class");
+$("#contoh-id").text("Hallo INI Cara Modifikasi ID");
+
+function hilangkan_Class(){
+    $(".contoh-class").hide();
+}
+
+var nama1 = 'BUDI';
+var nama2 = 'BUDI';
+
+var angka1 = 99;
+var angka2 = 89;
+
+var angka3 = 22;
+var angka4 = 99;
+
+// OPERATOR COMPARATOR 
+
+$("#persamaan").text(Boolean(nama1==nama2));
+$("#lebihkecil").text(Boolean(angka1<angka2));
+
+
+
+
+
+</script>
+
+</body>
+</html>

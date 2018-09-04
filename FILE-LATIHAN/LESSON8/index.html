@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .mobil{
+        background-color: aqua;
+        width: 40px;
+        height: 50px;
+    }
+
+    
+    </style>
+    
+</head>
+<body>
+
+   
+    <input type="text" id="jumlah"/>
+    <button onclick="tampil()">TAMPILKAN</button>
+
+    <div id="tempatTampil"><div>
+
+
+
+ 
+
+
+
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script>
+  
+
+  function tampil(){
+      
+      var jumlah = parseInt($('#jumlah').val());
+
+      for(var i = 1 ; i<jumlah; i++){
+        var x = Math.floor(1000 + Math.random() * 9000);
+        var gambar = "<img src='http://www.pikiran-rakyat.com/sites/files/public/styles/portrait_safe/public/image/2017/12/all%20new%20rush%202018.jpg?itok=BUMIyAdG' height='60' />";
+        var gambar2 = "<img src='https://auto.ndtvimg.com/car-images/medium/renault/kwid/renault-kwid.webp?v=2' height='60' />";
+        if(x%2 == 0){
+            $("#tempatTampil").append("<div>"+gambar2+" GENAP "+x+"</div>");
+
+        }else{
+            $("#tempatTampil").append("<div>"+gambar+" GANJIL "+x+"</div>");
+
+        }
+          
+      }
+  }
+
+
+
+   
+
+
+
+
+</script>
+
+</body>
+</html>
