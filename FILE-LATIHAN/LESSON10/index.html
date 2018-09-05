@@ -67,13 +67,14 @@
 
         console.log(pengunjungCafe); // tampilkan di console hasil penambahan
         console.log(genderPengunjung); // tampilkan di console hasil penambahan
-          
+         
           // menampilkan array yang datanya telah ditambah ke list
         for (var i= 0; i < pengunjungCafe.length; i++ ){
+            
                 if(genderPengunjung[i]=="Laki-Laki"){
-                    $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgLakiLaki+ "</li>");
+                    $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgLakiLaki+ " <button onclick='hapus("+i+")' > X HAPUS</button> </li>");
                 }else{
-                    $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgPerempuan+ " </li>");
+                    $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgPerempuan+ " <button onclick='hapus("+i+")' > X HAPUS</button> </li>");
                 }
         }
         $("#nama").val("");
@@ -124,6 +125,30 @@
                         $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgPerempuan+ " </li>");
                     }
             }
+      }
+
+
+      function hapus(x){
+         
+         var idAntrian = x;
+
+        pengunjungCafe.splice((idAntrian), 1);
+        genderPengunjung.splice((idAntrian), 1);
+
+        $('#contoh').empty();
+
+          for (var i= 0; i < pengunjungCafe.length; i++ ){
+                    if(genderPengunjung[i]=="Laki-Laki"){
+                        $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgLakiLaki+ "  </li>");
+                    }else{
+                        $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgPerempuan+ " </li>");
+                    }
+            }
+
+
+
+
+
       }
 
      
