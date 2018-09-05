@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+
+<body>
+
+    Nama 
+    <br/>
+    <input type="text" id="nama"/>
+    <br/>
+    Gender 
+    <br/>
+    <select id="gender">
+        <option value="Laki-Laki">Laki - Laki</option>
+        <option value="Perempuan">Perempuan</option>
+    </select>
+    <br/>
+    <button onclick="tambah()">Tambah Antrian</button>
+    <button onclick="hapusAntrianTerakhir()">Hapus Antrian Terakhir</button>
+    <button onclick="selesai()">Selesai</button>
+
+
+    <br />
+    <br />
+    <input type="text" id="nomorantrian"/>
+    <button onclick="hapusNomorAntrian()">Hapus Berdasarkan Nomor</button>
+
+
+    <h4>Antrian Pemesanan Kopi</h4>
+
+
+
+
+
+
+    <ol id="contoh"></ol>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+
+
+
+
+
+      var pengunjungCafe = [];
+      var genderPengunjung = [];
+      var imgLakiLaki = "<img src='assets/img/laki-laki.png' height='30'>";
+      var imgPerempuan = "<img src='assets/img/perempuan.png' height='30'>";
+      
+
+    
+      function tambah(){
+        $('#contoh').empty(); //kosongkan element  list 
+        
+        var nama = $("#nama").val(); // ambil data di input nama
+        var gender = $("#gender").val(); // ambil data di input nama
+        pengunjungCafe.push(nama); // tambahkann nama ke list
+        genderPengunjung.push(gender); // tambahkann nama ke list
+
+        console.log(pengunjungCafe); // tampilkan di console hasil penambahan
+        console.log(genderPengunjung); // tampilkan di console hasil penambahan
+          
+          // menampilkan array yang datanya telah ditambah ke list
+        for (var i= 0; i < pengunjungCafe.length; i++ ){
+                if(genderPengunjung[i]=="Laki-Laki"){
+                    $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgLakiLaki+ "</li>");
+                }else{
+                    $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgPerempuan+ " </li>");
+                }
+        }
+        $("#nama").val("");
+        
+        
+      }
+
+      function hapusAntrianTerakhir (){
+          pengunjungCafe.pop();
+          genderPengunjung.pop();
+
+           $('#contoh').empty(); //kosongkan element  list 
+
+                // menampilkan array yang datanya telah ditambah ke list
+            for (var i= 0; i < pengunjungCafe.length; i++ ){
+                    if(genderPengunjung[i]=="Laki-Laki"){
+                        $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgLakiLaki+ "  </li>");
+                    }else{
+                        $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgPerempuan+ " </li>");
+                    }
+            }
+      }
+
+
+      function selesai(){
+        pengunjungCafe.shift();
+        genderPengunjung.shift();
+        $('#contoh').empty();  
+
+
+
+      }
+
+      function hapusNomorAntrian(){
+            var nomorantrian = $('#nomorantrian').val();
+            var idAntrian = parseInt(nomorantrian);
+
+
+            pengunjungCafe.splice((idAntrian-1), 1);
+            genderPengunjung.splice((idAntrian-1), 1);
+
+            $('#contoh').empty();
+
+            for (var i= 0; i < pengunjungCafe.length; i++ ){
+                    if(genderPengunjung[i]=="Laki-Laki"){
+                        $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgLakiLaki+ "  </li>");
+                    }else{
+                        $('#contoh').append("<li> "+pengunjungCafe[i]+" "+imgPerempuan+ " </li>");
+                    }
+            }
+      }
+
+     
+
+
+
+    </script>
+
+</body>
+
+</html>
