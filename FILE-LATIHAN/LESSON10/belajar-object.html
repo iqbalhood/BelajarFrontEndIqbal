@@ -18,14 +18,17 @@
       <input type="text" id="nama">
       Harga
       <input harga="text" id="harga">
+      Jumlah
+      <input harga="text" id="jumlah">
     
-      <button onclick="tambahMakanan()">Submit</button>
+      <button onclick="tambahMakanan()">
+          Submit</button>
     
  </div>
     
  <ol id="pesanan"></ol>
 
-
+ <h1 id="GrandTotal"></ol>
 
 
 
@@ -42,19 +45,36 @@
        function tambahMakanan(){
         var nama = $("#nama").val();
         var harga = $("#harga").val();
+        var jumlah = $("#jumlah").val();
 
            var makanan = {
                nama_makanan : nama,   
-               harga : harga 
+               harga : harga , 
+               jumlah : jumlah
            }
 
            pesanan.push(makanan);
            console.log(pesanan);
+           $('#pesanan').empty();
+           var GrandTotal = 0;
 
-            $('#pesanan').empty();
            for(var i = 0 ; i<pesanan.length; i++){
-            $('#pesanan').append("<li> "+pesanan[i].nama_makanan+" -- "+pesanan[i].harga +"  </li>");
+
+            var total= parseInt(pesanan[i].harga) *  parseInt(pesanan[i].jumlah);
+            GrandTotal += total;
+            $('#pesanan').append("<li> "+pesanan[i].nama_makanan+" -- "
+            +pesanan[i].harga +" -- Jumlah "
+            +pesanan[i].jumlah +" Total= "+ total+" </li>");
+
+
+
            }
+
+
+           $('#GrandTotal').text("Grand Total"+GrandTotal);
+
+
+
        }
 
 
