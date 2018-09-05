@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+
+<body>
+
+    <h1>Go Food</h1>
+ <div> 
+      Nama
+      <input type="text" id="nama">
+      Harga
+      <input harga="text" id="harga">
+    
+      <button onclick="tambahMakanan()">Submit</button>
+    
+ </div>
+    
+ <ol id="pesanan"></ol>
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+
+       var pesanan = [];
+      
+
+       function tambahMakanan(){
+        var nama = $("#nama").val();
+        var harga = $("#harga").val();
+
+           var makanan = {
+               nama_makanan : nama,   
+               harga : harga 
+           }
+
+           pesanan.push(makanan);
+           console.log(pesanan);
+
+            $('#pesanan').empty();
+           for(var i = 0 ; i<pesanan.length; i++){
+            $('#pesanan').append("<li> "+pesanan[i].nama_makanan+" -- "+pesanan[i].harga +"  </li>");
+           }
+       }
+
+
+
+
+    </script>
+</body>
+
+</html>
