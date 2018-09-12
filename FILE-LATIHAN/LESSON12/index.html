@@ -37,20 +37,27 @@
 
                 </div>
                 <div id="add_to_cart" class="row">
-                    <div style="text-transform: uppercase;"><h4 id="nama"> </h4></div>
-                    <div><h6 id="harga"> </h6></div>
-                    <div class="row" >
+                    <div style="text-transform: uppercase;"><h4 id="nama" class="text-center"> </h4></div>
+                    <div><h6 id="harga" class="text-center"> </h6></div>
+                    <div class="row">
                         <div class="col-sm-4">
-                            <button onclick="berkurang()">-</button>
+                                <center>
+                            <button class="btn btn-primary " onclick="berkurang()">-</button>
+                            </center>
                         </div>
                         <div class="col-sm-4">
-                            <h6 id="quantity"> </h6>
+                            <h6  class="text-center" id="quantity"> </h6>
                         </div>
                         <div class="col-sm-4">
-                            <button onclick="bertambah()">+</button>
+                            <center>
+                            <button class="btn btn-primary " onclick="bertambah()">+</button>
+                            </center>
                         </div>  
                     </div>
-                    <h4 id="total_harga"> </h4>
+                    <h4 id="total_harga" class="text-center"> </h4>
+                    <div class="row">
+                    <button class="col-sm-12 btn btn-primary btn-lg" onclick="pesan()">Pesan</button>
+                    </div>
                 </div>
             </div>
              <!-- PANEL DAFTAR PESANAN -->
