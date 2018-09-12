@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <!-- PANEL DAFTAR MAKANAN DAN MINUMAN -->
+            <div class="col-sm-6">
+                <h4>Daftar Makanan</h4>
+                <table id="daftar-makanan" class="table table-striped">
+
+                </table>
+                <h4>Daftar Minuman</h4>
+                <table id="daftar-minuman" class="table table-striped">
+
+                </table>
+            </div>
+            <!-- PANEL DAFTAR MAKANAN DAN MINUMAN -->
+
+             <!-- PANEL DAFTAR PESANAN -->
+            <div class="col-sm-6">
+                <div class="row"><h4>Daftar Pesanan</h4></div>
+                <div id="list-pesanan" class="row">
+
+                </div>
+                <div id="add_to_cart" class="row">
+                    <div style="text-transform: uppercase;"><h4 id="nama"> </h4></div>
+                    <div><h6 id="harga"> </h6></div>
+                    <div class="row" >
+                        <div class="col-sm-4">
+                            <button onclick="berkurang()">-</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <h6 id="quantity"> </h6>
+                        </div>
+                        <div class="col-sm-4">
+                            <button onclick="bertambah()">+</button>
+                        </div>  
+                    </div>
+                    <h4 id="total_harga"> </h4>
+                </div>
+            </div>
+             <!-- PANEL DAFTAR PESANAN -->
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/accounting.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
