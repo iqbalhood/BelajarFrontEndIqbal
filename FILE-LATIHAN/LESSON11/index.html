@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
-   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
 </head>
+
 <body>
-    
+
+
 
     <div class="container">
         <div class="row">
 
-                <div class="col-sm-6">
-                    <h4>Daftar Makanan</h4>
-                    <div id="daftar-makanan">
-
-                    </div>
-                    <h4>Daftar Minuman</h4>
-                    <div id="daftar-minuman">
-
-                    </div>
-
+            <div class="col-sm-6">
+                <h4>Daftar Makanan</h4>
+                <div id="daftar-makanan">
 
                 </div>
-                <div class="col-sm-6">
-                        <h4>Daftar Pesanan</h4>
+                <h4>Daftar Minuman</h4>
+                <div id="daftar-minuman">
 
                 </div>
+
+
+            </div>
+            <div class="col-sm-6">
+                <h4>Daftar Pesanan</h4>
+                <div id="list-pesanan">
+
+                </div>
+
+                <div id="add_to_cart">
+                    <h6 id="nama"> </h6>
+                    <h6 id="harga"> </h6>
+                    <button onclick="berkurang()">-</button>
+                    <h6 id="quantity"> </h6>
+                    <button onclick="bertambah()">+</button>
+                    <h4 id="total_harga"> </h4>
+                </div>
+
+
+
+
+            </div>
 
         </div>
     </div>
@@ -37,4 +56,5 @@
     <script src="assets/js/accounting.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
